@@ -8,10 +8,11 @@ pages:
   script:
     - yarn install
     - yarn build-storybook
+    - mv -fr storybook-static public
 
   artifacts:
     paths:
-      - storybook-static
+      - public
 
   only:
     - master
