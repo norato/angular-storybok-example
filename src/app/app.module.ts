@@ -4,11 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
 import { OtherComponent } from './other/other.component';
+import { GridOverlayComponent } from './grid-overlay/grid-overlay.component';
+
+const allComponents = [
+  AppComponent,
+  ExampleComponent,
+  OtherComponent,
+  GridOverlayComponent
+];
 
 @NgModule({
-  declarations: [AppComponent, ExampleComponent, OtherComponent],
+  declarations: [...allComponents],
   imports: [BrowserModule],
-  exports: [ExampleComponent],
+  exports: [...allComponents],
   providers: [],
   bootstrap: [AppComponent]
 })
