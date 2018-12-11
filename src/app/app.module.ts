@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
+import { OtherComponent } from './other/other.component';
 
 @NgModule({
-  declarations: [AppComponent, ExampleComponent],
+  declarations: [AppComponent, ExampleComponent, OtherComponent],
   imports: [BrowserModule],
   exports: [ExampleComponent],
   providers: [],

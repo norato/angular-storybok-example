@@ -7,12 +7,12 @@ const metadata = moduleMetadata({
 
 storiesOf('Example Component', module)
   .addDecorator(metadata)
-  .add('default', () => ({
-    template: `<app-example></app-example>`,
-    props: {}
-  }))
-  .add('with props', () => ({
-    template: `<app-example [text]="variable"></app-example>`,
+  .add('with props in template', () => ({
+    template: `
+    <div class="box">
+      <app-example [text]="variable"></app-example>
+    </div>
+    `,
     props: {
       variable: 'amazing variable'
     }
