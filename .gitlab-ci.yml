@@ -8,7 +8,7 @@ pages:
   script:
     - yarn install
     - yarn build-storybook
-    - mv -fr storybook-static public
+    - mv storybook-static public
 
   artifacts:
     paths:
