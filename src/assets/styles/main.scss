@@ -40,3 +40,16 @@ body {
     flex-grow: 1;
   }
 }
+
+.desktop {
+  display: none;
+  @media (min-width: 867px) {
+    display: block;
+  }
+}
+.mobile {
+  display: block;
+  @media (min-width: 867px) {
+    display: none;
+  }
+}
