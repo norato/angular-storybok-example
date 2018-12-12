@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-other',
@@ -7,8 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OtherComponent implements OnInit {
   @Input() content;
+  @Input() showInput = false;
+  @Output() inputValue: EventEmitter<any> = new EventEmitter();
+  @Output() submitValue: EventEmitter<any> = new EventEmitter();
+  form: FormGroup;
 
-  constructor() {}
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.form = this.formBuilder.group({ text: '' });
+  }
+  emitValue(e) {
+    this.inputValue.emit(e);
+  }
+  onSubmit() {
+    this.submitValue.emit(this.form.value);
+  }
 }

@@ -1,3 +1,8 @@
 <p>
   {{content}}
 </p>
+<form *ngIf="showInput" [formGroup]="form" (submit)="onSubmit()">
+  <input type="text" formControlName="text"
+    (keypress)="emitValue($event)">
+  <button type="submit">Submit</button>
+</form>

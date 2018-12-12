@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
@@ -15,7 +16,7 @@ const allComponents = [
 
 @NgModule({
   declarations: [...allComponents],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ReactiveFormsModule],
   exports: [...allComponents],
   providers: [],
   bootstrap: [AppComponent]
