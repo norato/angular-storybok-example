@@ -2,6 +2,7 @@ import { addDecorator, configure } from '@storybook/angular';
 import { withOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
+import '@storybook/addon-console';
 
 addDecorator(
   withOptions({

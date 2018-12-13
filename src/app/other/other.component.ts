@@ -19,6 +19,7 @@ export class OtherComponent implements OnInit {
     this.form = this.formBuilder.group({ text: '' });
   }
   emitValue(e) {
+    console.log(this.form.get('text').value);
     this.inputValue.emit(e);
   }
   onSubmit() {

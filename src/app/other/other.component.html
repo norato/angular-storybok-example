@@ -3,6 +3,6 @@
 </p>
 <form *ngIf="showInput" [formGroup]="form" (submit)="onSubmit()">
   <input type="text" formControlName="text"
-    (keypress)="emitValue($event)">
+    (keyup)="emitValue($event)">
   <button type="submit">Submit</button>
 </form>
