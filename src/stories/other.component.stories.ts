@@ -4,9 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 storiesOf('Custom | Angular / OtherComponent', module)
   .addDecorator(moduleMetadata({ imports: [ReactiveFormsModule] }))
-  .add('default', () => ({
-    component: OtherComponent,
-    props: {
-      content: 'It is a prop passing a content'
-    }
-  }));
+  .add(
+    'default',
+    () => ({
+      component: OtherComponent,
+      props: {
+        content: 'It is a prop passing a content'
+      }
+    }),
+    { jest: 'other.component' }
+  );
