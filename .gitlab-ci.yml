@@ -7,6 +7,7 @@ pages:
 
   script:
     - yarn install
+    - yarn storybook:prebuild
     - yarn build-storybook
     - mv storybook-static public
 
