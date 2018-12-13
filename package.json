@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "jest",
-    "test:json": "jest --json --outputFile=jest-test-results.json || true",
+    "test:json": "jest --json --outputFile=jest-test-results.json --runInBand || true",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "yarn storybook:prebuild && yarn start-storybook -p 6006",
