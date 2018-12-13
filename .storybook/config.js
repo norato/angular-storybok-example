@@ -1,5 +1,7 @@
 import { addDecorator, configure } from '@storybook/angular';
 import { withOptions } from '@storybook/addon-options';
+import { withKnobs } from '@storybook/addon-knobs';
+import { withBackgrounds } from '@storybook/addon-backgrounds';
 
 addDecorator(
   withOptions({
@@ -8,6 +10,16 @@ addDecorator(
     hierarchySeparator: /\//,
     hierarchyRootSeparator: /\|/
   })
+);
+
+addDecorator(withKnobs); // Addon Knob available for all stories
+
+addDecorator(
+  // Addon Backgrounds configured for all stories
+  withBackgrounds([
+    { name: 'twitter', value: '#00aced' },
+    { name: 'facebook', value: '#3b5998' }
+  ])
 );
 
 // automatically import all files ending in *.stories.ts
