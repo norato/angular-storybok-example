@@ -1,10 +1,6 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { AppModule } from 'src/app/app.module';
-
-const metadata = moduleMetadata({
-  imports: [AppModule]
-});
+import { metadata } from '../utils';
 
 storiesOf('Addons | Actions', module)
   .addDecorator(metadata)

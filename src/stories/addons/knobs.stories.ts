@@ -1,10 +1,6 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { storiesOf } from '@storybook/angular';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
-import { AppModule } from 'src/app/app.module';
-
-const metadata = moduleMetadata({
-  imports: [AppModule]
-});
+import { metadata } from '../utils';
 
 storiesOf('Addons | Knobs', module)
   .addDecorator(metadata)

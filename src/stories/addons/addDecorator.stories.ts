@@ -1,12 +1,7 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
+import { storiesOf } from '@storybook/angular';
 import { gridWrap } from './wrap';
 import { boolean } from '@storybook/addon-knobs';
-
-import { AppModule } from 'src/app/app.module';
-
-const metadata = moduleMetadata({
-  imports: [AppModule]
-});
+import { metadata } from '../utils';
 
 storiesOf('Addons | addDecorator', module)
   .addDecorator(gridWrap) // Decorator to add the grid-overlay component to stories

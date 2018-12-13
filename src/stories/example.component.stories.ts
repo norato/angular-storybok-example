@@ -1,13 +1,8 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { AppModule } from './../app/app.module';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
-
-const metadata = moduleMetadata({
-  imports: [AppModule]
-});
+import { storiesOf } from '@storybook/angular';
+import { boolean } from '@storybook/addon-knobs';
+import { metadata } from './utils';
 
 storiesOf('Custom | Angular / Example Component', module)
-  .addDecorator(withKnobs)
   .addDecorator(metadata)
   .add('with props in template', () => ({
     template: `
