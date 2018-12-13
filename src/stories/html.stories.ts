@@ -1,12 +1,30 @@
 import { storiesOf } from '@storybook/angular';
 
 storiesOf('Custom | HTML / Raw Html Story', module)
-  .add('default', () => ({
+  .add('inline style', () => ({
     template: `
-    <div style="diaplay: block;">
-      <h1 style="color: red;">here is a only html + in-line css story</h1>
-    </div>
-  `
+      <div style="diaplay: block;">
+        <h1 style="color: red;">here is a only html + in-line css story</h1>
+      </div>
+    `
+  }))
+  .add('style property', () => ({
+    template: `
+      <div class="main-div">
+        <h1 class="main-title">here is a only html + css property story</h1>
+      </div>
+    `,
+    styles: [
+      `
+      .main-div {
+        display: block;
+      }
+
+      .main-div > .main-title {
+        color: red;
+      }
+      `
+    ]
   }))
   .add('define a grid', () => ({
     template: `
