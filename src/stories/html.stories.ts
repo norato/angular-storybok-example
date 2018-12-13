@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/angular';
 
-storiesOf('Raw Html Story', module)
+storiesOf('Custom | HTML / Raw Html Story', module)
   .add('default', () => ({
     template: `
     <div style="diaplay: block;">

@@ -5,12 +5,12 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Welcome, Button } from '@storybook/angular/demo';
 
-storiesOf('Welcome', module).add('to Storybook', () => ({
+storiesOf('Default Storybook | Welcome', module).add('to Storybook', () => ({
   component: Welcome,
   props: {}
 }));
 
-storiesOf('Button', module)
+storiesOf('Default Storybook | Button', module)
   .add('with text', () => ({
     component: Button,
     props: {
@@ -37,7 +37,7 @@ storiesOf('Button', module)
     }))
   );
 
-storiesOf('Another Button', module).add(
+storiesOf('Default Storybook | Another Button', module).add(
   'button with link to another story',
   () => ({
     component: Button,

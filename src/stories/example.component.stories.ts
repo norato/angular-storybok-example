@@ -6,7 +6,7 @@ const metadata = moduleMetadata({
   imports: [AppModule]
 });
 
-storiesOf('Example Component', module)
+storiesOf('Custom | Angular / Example Component', module)
   .addDecorator(withKnobs)
   .addDecorator(metadata)
   .add('with props in template', () => ({
