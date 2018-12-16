@@ -1,27 +1,56 @@
-# AngularStorybookExample
+# Angular Storybook Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.8.
+[The Storybook](https://storybook.js.org) is a tool to developers be able to create components isolated from application and demonstrate it as a showcase.
 
-## Development server
+This project was created to explain and demonstrate show to use Storybook inside a Angular project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The demo is available at [Gitlab Pages](https://norato.gitlab.io/angular-storybok-example/)
 
-## Code scaffolding
+## The Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular](https://angular.io) - v6.1.0
+- [Angular CLI](https://github.com/angular/angular-cli) - v6.2.8
+- [Storybook](https://storybook.js.org) - v4.0.12
+- [Jest](https://jestjs.io/) - v23.6.0
 
-## Build
+## Install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You need to have installed previously `node` and `yarn` before install the dependencies.
 
-## Running unit tests
+```bash
+$ yarn install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run the Angular Application
 
-## Running end-to-end tests
+```bash
+$ yarn start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Run the Storybook Server
 
-## Further help
+```bash
+$ yarn storybook
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Build Storybook static files
+
+```bash
+$ yarn storybook:prebuild && yarn build-storybooka
+```
+
+## Storybook Addons
+
+There are some demos about the available Addons for Storybook.
+
+- [Notes](https://github.com/storybooks/storybook/tree/master/addons/notes) - Add a footnote as string or importing a Markdown file;
+- [Actions](https://github.com/storybooks/storybook/tree/master/addons/actions) - Logging the response of a event emitted by a component;
+- [Links](https://github.com/storybooks/storybook/tree/master/addons/links) - Link to another story;
+- [Knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs) - Allows to edit the story props;
+- [ViewPort](https://github.com/storybooks/storybook/tree/master/addons/viewport) - Provides select view size of the story to build responsive components;
+- [Storysource](https://github.com/storybooks/storybook/tree/master/addons/storysource) - Show the story code in the Story Panel;
+- [Options](https://github.com/storybooks/storybook/tree/master/addons/options) - Change some storybook server properties;
+- [Backgrounds](https://github.com/storybooks/storybook/tree/master/addons/backgrounds) - Allows to change the story background color;
+- [Console](https://github.com/storybooks/storybook-addon-console) -
+  Redirects console output into Action Logger Panel;
+- [Jest](https://github.com/storybooks/storybook/tree/master/addons/jest) - Shows the Jest tests status at Jest Panel.
