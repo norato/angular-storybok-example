@@ -4,7 +4,7 @@
 
 This project was created to explain and demonstrate show to use Storybook inside a Angular project.
 
-The demo is available at [Gitlab Pages](https://norato.gitlab.io/angular-storybok-example/)
+The demo is available at [GitHub Pages](https://norato.github.io/angular-storybok-example/)
 
 ## The Stack
 
