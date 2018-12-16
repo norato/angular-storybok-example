@@ -1,0 +1,28 @@
+node_js:
+  - '9'
+dist: trusty
+sudo: false
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g yarn
+
+script:
+  - yarn storybook:prebuild
+  - yarn build-storybook
+  - mv storybook-static docs
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/my-awesome-project
+  on:
+    branch: master
