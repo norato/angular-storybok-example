@@ -16,6 +16,7 @@ install:
 
 script:
   - yarn
+  - yarn build
   - yarn storybook:prebuild
   - yarn build-storybook
   - mv storybook-static docs
