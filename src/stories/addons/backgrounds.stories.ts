@@ -1,13 +1,21 @@
-// import { storiesOf } from '@storybook/angular';
-// import { withBackgrounds } from '@storybook/addon-backgrounds';
+import { Meta } from '@storybook/angular';
 
-// storiesOf('Addons | Backgrounds', module)
-//   .addDecorator(
-//     withBackgrounds([
-//       { name: 'twitter', value: '#00aced', default: true },
-//       { name: 'facebook', value: '#3b5998' }
-//     ])
-//   )
-//   .add('default', () => ({
-//     template: `<h2>Click at <b>BACKGROUNDS</b> at the menu above to change de background color</h2>`
-//   }));
+export default {
+  title: 'Addons / Backgrounds',
+  parameters: {
+    backgrounds: {
+      default: 'twitter',
+      values: [
+        { name: 'twitter', value: '#00aced' },
+        { name: 'facebook', value: '#3b5998' },
+      ],
+    },
+  }
+} as Meta;
+
+export const Default = () => ({
+  template: 
+    `<h2>Click at <b>BACKGROUNDS</b> at the menu above to change de background color</h2>`
+  ,
+  props: {},
+});
