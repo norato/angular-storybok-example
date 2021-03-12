@@ -1,15 +1,13 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { AppModule } from 'src/app/app.module';
+import { metadata } from '../utils';
 
-const metadata = moduleMetadata({
-  imports: [AppModule]
-});
+export default {
+  title: 'Addons / Console',
+  decorators: [metadata]
+};
 
-storiesOf('Addons | Console', module)
-  .addDecorator(metadata)
-  .add('story name', () => ({
-    template: `
+export const Default = () => ({
+  template: `
     <app-other
       [showInput]="true"
       (inputValue)="keyPressed($event)"
@@ -17,8 +15,9 @@ storiesOf('Addons | Console', module)
     </app-other>
     <h2>Click at <b>ACTION LOGGER</b> at the menu above to see the action</h2>
   `,
-    props: {
-      keyPressed: action('keyPressed'),
-      formValue: action('formValue')
-    }
-  }));
+  props: {
+    keyPressed: action('keyPressed'),
+    formValue: action('formValue')
+  }
+});
+

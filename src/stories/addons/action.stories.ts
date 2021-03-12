@@ -34,7 +34,3 @@ export const Default = () => {
     },
   };
 }
-
-Default.story = {
-  name: 'Addons \ Actions',
-};
