@@ -1,10 +1,25 @@
-import { storiesOf } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 import { metadata } from '../utils';
 
-storiesOf('Addons | Actions', module)
-  .addDecorator(metadata)
-  .add('story name', () => ({
+export default {
+  title: 'Addons / Actions',
+  decorators: [metadata]
+};
+
+export const Default = () => {
+
+  const keyPressed = (e) => {
+    console.log(e);
+    e.preventDefault();
+    action('keyPressed')(e.target.value, 'Another arg');
+  };
+
+  const formValue = (e) => {
+    console.log(e);
+    action('formValue')(e.text, 'Another arg');
+  };
+
+  return {
     template: `
     <app-other
       [showInput]="true"
@@ -14,7 +29,12 @@ storiesOf('Addons | Actions', module)
     <h2>Click at <b>ACTION LOGGER</b> at the menu above to see the action</h2>
   `,
     props: {
-      keyPressed: action('keyPressed'),
-      formValue: action('formValue')
-    }
-  }));
+      keyPressed,
+      formValue
+    },
+  };
+}
+
+Default.story = {
+  name: 'Addons \ Actions',
+};
