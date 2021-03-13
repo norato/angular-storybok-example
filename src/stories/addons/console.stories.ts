@@ -1,5 +1,6 @@
 import { action } from '@storybook/addon-actions';
-import { metadata } from '../utils';
+
+import { metadata } from '../utils/utils';
 
 export default {
   title: 'Addons / Console',

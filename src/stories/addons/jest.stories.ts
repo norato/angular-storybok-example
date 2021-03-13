@@ -1,7 +1,8 @@
+import { withTests } from '@storybook/addon-jest';
+
+import results from '../../../jest-test-results.json';
+import { metadata } from '../utils/utils';
 import { AppComponent } from './../../app/app.component';
-import results from "../../../jest-test-results.json";
-import { metadata } from '../utils';
-import { withTests } from "@storybook/addon-jest";
 
 
 export default {

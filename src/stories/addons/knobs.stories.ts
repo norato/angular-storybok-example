@@ -1,6 +1,7 @@
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { Meta } from '@storybook/angular';
-import { metadata } from '../utils';
+
+import { metadata } from '../utils/utils';
 
 export default {
   title: 'Addons / Knobs',

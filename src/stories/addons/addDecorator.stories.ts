@@ -1,6 +1,7 @@
-import { gridWrap } from './wrap';
 import { boolean } from '@storybook/addon-knobs';
-import { metadata } from '../utils';
+
+import { metadata } from '../utils/utils';
+import { gridWrap } from '../utils/wrap';
 
 export default {
   title: 'Addons / Decorators',
