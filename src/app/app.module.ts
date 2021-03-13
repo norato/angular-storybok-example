@@ -15,7 +15,7 @@ const allComponents = [
 ];
 
 @NgModule({
-  //declarations: [...allComponents],
+  declarations: [...allComponents],
   imports: [BrowserModule, ReactiveFormsModule],
   exports: [...allComponents],
   providers: [],

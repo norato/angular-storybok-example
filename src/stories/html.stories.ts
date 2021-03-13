@@ -1,21 +1,26 @@
-import { storiesOf } from '@storybook/angular';
 
-storiesOf('Custom | HTML / Raw Html Story', module)
-  .add('inline style', () => ({
-    template: `
-      <div style="diaplay: block;">
-        <h1 style="color: red;">here is a only html + in-line css story</h1>
-      </div>
-    `
-  }))
-  .add('style property', () => ({
-    template: `
+export default {
+  title: 'Custom / HTML / Raw Html Story',
+};
+
+export const Default = () => ({
+  template: `
+  <div style="diaplay: block;">
+    <h1 style="color: red;">here is a only html + in-line css story</h1>
+  </div>
+  `,
+});
+
+Default.storyName = 'inline style';
+
+export const StyleProperty = () => ({
+  template: `
       <div class="main-div">
         <h1 class="main-title">here is a only html + css property story</h1>
       </div>
     `,
-    styles: [
-      `
+  styles: [
+    `
       .main-div {
         display: block;
       }
@@ -24,10 +29,13 @@ storiesOf('Custom | HTML / Raw Html Story', module)
         color: red;
       }
       `
-    ]
-  }))
-  .add('define a grid', () => ({
-    template: `
+  ]
+});
+
+StyleProperty.storyName = 'style property';
+
+export const Grid = () => ({
+  template: `
     <h1> Grid example</h1>
     <div class="wrapper">
     <div class="box a">A</div>
@@ -37,10 +45,12 @@ storiesOf('Custom | HTML / Raw Html Story', module)
     <div class="box e">E</div>
     <div class="box f">F</div>
   </div>`,
-    props: {}
-  }))
-  .add('typography', () => ({
-    template: `
+});
+
+Grid.storyName = 'define a grid';
+
+export const Typography = () => ({
+  template: `
     <div class="container">
       <h1> Typography example</h1>
       <h1>Lighter, Secondary Text</h1>
@@ -53,5 +63,7 @@ storiesOf('Custom | HTML / Raw Html Story', module)
       <h6>h6 heading <small>secondary text</small></h6>
     </div>
     `,
-    props: {}
-  }));
+});
+
+Typography.storyName = 'typography';
+

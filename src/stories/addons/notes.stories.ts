@@ -10,31 +10,47 @@ We can write some docs here
 ## Subtitle
 `;
 
-storiesOf('Addons | Notes', module)
-  .add(
-    'text',
-    withNotes({ text: 'My simple text note' })(() => ({
-      template: `
-        <h1>Note with simple text example</h1>
-        <h2>Click at <b>NOTES</b> at the menu above</h2>
-      `
-    }))
-  )
-  .add(
-    'inline markdown',
-    withNotes({ markdown })(() => ({
-      template: `
-        <h1>Note with inline markdown example</h1>
-        <h2>Click at <b>NOTES</b> at the menu above</h2>
-      `
-    }))
-  )
-  .add(
-    'import markdown file',
-    withNotes({ markdown: markdownFile })(() => ({
-      template: `
-        <h1>Note with markdown file example</h1>
-        <h2>Click at <b>NOTES</b> at the menu above</h2>
-      `
-    }))
-  );
+
+
+
+export default {
+  title: 'Addons / Notes',
+};
+
+export const Text = () => ({
+  decorators: [withNotes({ text: 'My simple text note' })],
+  template: `
+    <h1> story works!<h1>
+  `,
+  props: {},
+});
+
+
+// storiesOf('Addons | Notes', module)
+//   .add(
+//     'text',
+//     withNotes({ text: 'My simple text note' })(() => ({
+//       template: `
+//         <h1>Note with simple text example</h1>
+//         <h2>Click at <b>NOTES</b> at the menu above</h2>
+//       `
+//     }))
+//   )
+//   .add(
+//     'inline markdown',
+//     withNotes({ markdown })(() => ({
+//       template: `
+//         <h1>Note with inline markdown example</h1>
+//         <h2>Click at <b>NOTES</b> at the menu above</h2>
+//       `
+//     }))
+//   )
+//   .add(
+//     'import markdown file',
+//     withNotes({ markdown: markdownFile })(() => ({
+//       template: `
+//         <h1>Note with markdown file example</h1>
+//         <h2>Click at <b>NOTES</b> at the menu above</h2>
+//       `
+//     }))
+//   );
